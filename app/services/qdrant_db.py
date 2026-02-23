@@ -43,6 +43,7 @@ def get_client() -> QdrantClient:
         _client = QdrantClient(
             host="qdrant", 
             port=6333,
+            https=False,
             api_key=os.getenv("QDRANT_API_KEY") # Added for security
         )
         logger.info("Connected to secure Qdrant instance")
